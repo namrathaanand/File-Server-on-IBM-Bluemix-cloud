@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+</head>
+<body>
+
+    <h2 style="text-align: center">Welcome to Bluemix</h2><br>
+
+    <h3>Upload a the file here</h3>
+    <p style="color: red"> {{ output2 }}</p><br>
+   <form action="/upload">
+      <input type="file" name="file">
+      <input type="submit" name="upload" value="Upload">
+   </form>
+
+    <hr>
+
+    <h3>Download a file from the database</h3>
+    <p style="color: red"> {{ output1 }}</p>
+   <form action="/download">
+     File Name: <input type="text" name="filename" placeholder="Enter file name"><br><br>
+     <input type="submit" name="download" value="Download">
+   </form>
+
+    <hr>
+
+    <h3>Here you can List all the files</h3>
+   <form action="/list">
+     <input type="submit" name="list" value="List Files">
+   </form>
+
+    <hr>
+
+    <h3>Delete a file from the database</h3>
+
+    <p style="color: red"> {{ output }}</p>
+   <form id="delete_form" action="/delete">
+     File Name: <input type="text" name="filename" placeholder="Enter file name"><br><br>
+     <input type="submit" name="filename" value="Delete">
+   </form>
+
+    <hr>
+
+    <br><form action="/exit">
+        <input type="submit" value="Exit the application">
+    </form>
+
+</body>
+</html>

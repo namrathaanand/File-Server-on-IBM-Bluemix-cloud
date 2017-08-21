@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File List</title>
+</head>
+<body>
+
+<br> <h2>The list of files on Bluemix are:</h2><br><br>
+    {% for file in files %}
+        <li>
+            {{ file }}
+        </li>
+{% endfor %}
+
+</body>
+</html>
